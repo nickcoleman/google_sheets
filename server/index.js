@@ -15,8 +15,6 @@ app.use(cors())
 app.post('/', async (req, res) => {
   console.log("req ", req.body);
 
-  let info
-
   const client = new google.auth.JWT(keys.client_email, null, keys.private_key, [
     'https://www.googleapis.com/auth/spreadsheets',
   ]);
@@ -51,9 +49,9 @@ app.post('/', async (req, res) => {
     };
 
     try {
-      info = await gsapi.spreadsheets.values.append(updateOptions)
+      response = await gsapi.spreadsheets.values.append(updateOptions)
       // console.log('****** info', info)
-      res.status(200).send(info)
+      res.status(200).send(response)
     } catch (error) {
       console.error(error)
       res.status(500).send(error)
