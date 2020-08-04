@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 export const GoogleSpreadsheetAPI = () => {
   const [formData, setFormData] = React.useState({});
@@ -12,11 +13,12 @@ export const GoogleSpreadsheetAPI = () => {
 
   async function sendData(e) {
     e.preventDefault();
-    const {firstName, lastname, email, comment} = formData;
-
+    const {firstName, lastName, email, comment} = formData;
+    const now = moment().format("MMM DD, YYYY HH:MM")
     const values = JSON.stringify([
-      [firstName, lastname, email, comment]
+      [firstName, lastName, email, comment, now]
     ]);
+    console.log("sendData -> values", values);
 
     try {
       await fetch(
@@ -26,7 +28,7 @@ export const GoogleSpreadsheetAPI = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: {values},
+          body: values,
         }
       );
       // const json = await response.json();

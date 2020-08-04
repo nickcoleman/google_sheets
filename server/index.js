@@ -1,8 +1,7 @@
 const {google} = require('googleapis');
 const express = require('express');
-const moment = require('moment')
 const cors = require('cors');
-
+const bodyParser = require('body-parser')
 
 const port = process.env.PORT || 4000;
 
@@ -10,10 +9,10 @@ const keys = require('./keys.json');
 
 const app = express();
 app.use(cors())
+app.use(bodyParser.json())
 
 
-app.post('/', async (req, res) => {
-  console.log("req ", req.body);
+app.post('/', (req, res) => {
 
   const client = new google.auth.JWT(keys.client_email, null, keys.private_key, [
     'https://www.googleapis.com/auth/spreadsheets',
@@ -32,25 +31,17 @@ app.post('/', async (req, res) => {
   });
 
   const gsrun = async () => {
-    const now = moment().format("MMM DD, YYYY HH:MM")
     const updateOptions = {
       spreadsheetId: keys.spreadsheet_id,
       range: 'Data!A1',
       insertDataOption: 'INSERT_ROWS',
       valueInputOption: 'USER_ENTERED',
       includeValuesInResponse: true,
-      resource: {values: [ [
-        "first",
-        "second",
-        "f@s.com",
-        "fs comment",
-        now
-      ] ]},
+      resource: {values: req.body},
     };
 
     try {
       response = await gsapi.spreadsheets.values.append(updateOptions)
-      // console.log('****** info', info)
       res.status(200).send(response)
     } catch (error) {
       console.error(error)
