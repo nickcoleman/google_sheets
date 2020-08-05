@@ -1,13 +1,15 @@
 import React from 'react';
-import GoogleSpreadsheetAPI from './GoogleSpreadsheetAPI'
+import {Promotion} from './landing_pages/Promotion'
+import { ThemeProvider } from '@material-ui/core'
+import theme from './theme'
 
 import './App.css';
 
 function App() {
   return (
-    <div className='App'>
-      <GoogleSpreadsheetAPI />
-    </div>
+    <ThemeProvider theme={theme}>
+      <Promotion />
+    </ThemeProvider>
   );
 }
 

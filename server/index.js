@@ -12,7 +12,7 @@ app.use(cors())
 app.use(bodyParser.json())
 
 
-app.post('/', (req, res) => {
+app.post('/landing/contact', (req, res) => {
 
   const client = new google.auth.JWT(keys.client_email, null, keys.private_key, [
     'https://www.googleapis.com/auth/spreadsheets',
@@ -33,7 +33,7 @@ app.post('/', (req, res) => {
   const gsrun = async () => {
     const updateOptions = {
       spreadsheetId: keys.spreadsheet_id,
-      range: 'Data!A1',
+      range: 'Example!A1',
       insertDataOption: 'INSERT_ROWS',
       valueInputOption: 'USER_ENTERED',
       includeValuesInResponse: true,
