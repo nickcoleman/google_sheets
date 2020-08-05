@@ -1,22 +1,35 @@
 const {google} = require('googleapis');
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 
 const port = process.env.PORT || 4000;
 
 const keys = require('./keys.json');
 
 const app = express();
-app.use(cors())
-app.use(bodyParser.json())
+app.use(cors());
+app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res
+    .status(200)
+    .send(
+      'MA Server is running -- navigate to http://https://ma-server-285520.wl.r.appspot.com/landing/contact'
+    );
+});
+
+app.get('/landing', (req, res) => {
+  res.send(200).send('Landing Pages');
+});
 
 app.post('/landing/contact', (req, res) => {
-
-  const client = new google.auth.JWT(keys.client_email, null, keys.private_key, [
-    'https://www.googleapis.com/auth/spreadsheets',
-  ]);
+  const client = new google.auth.JWT(
+    keys.client_email,
+    null,
+    keys.private_key,
+    ['https://www.googleapis.com/auth/spreadsheets']
+  );
 
   const gsapi = google.sheets({version: 'v4', auth: client});
 
@@ -41,11 +54,11 @@ app.post('/landing/contact', (req, res) => {
     };
 
     try {
-      response = await gsapi.spreadsheets.values.append(updateOptions)
-      res.status(200).send(response)
+      response = await gsapi.spreadsheets.values.append(updateOptions);
+      res.status(200).send(response);
     } catch (error) {
-      console.error(error)
-      res.status(500).send(error)
+      console.error(error);
+      res.status(500).send(error);
     }
   };
 });
