@@ -44,7 +44,7 @@ export const ContactForm = ({campaign}) => {
   };
 
   return (
-    <Container>
+    <Container maxWidth='md'>
       <hr />
       <Typography variant='h6' gutterBottom>
         Contact Form
@@ -56,7 +56,7 @@ export const ContactForm = ({campaign}) => {
         required
         onSubmit={sendData}
       >
-        <Grid container spacing={3}>
+        <Grid container spacing={3} maxWidth='sm'>
           <Grid item xs={12} sm={6}>
             <TextField
               name='firstName'
