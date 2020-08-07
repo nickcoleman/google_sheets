@@ -10,7 +10,7 @@ import {BASE_URL_LANDING} from 'helpers/constants';
 import AbstractCheckboxGroup from 'shared/AbstractCheckboxGroup';
 
 const initialAges = [
-  {label: '3 to 5', id: 'age3', checked: false},
+  {label: '3 to 4', id: 'age3', checked: false},
   {label: '5 to 7', id: 'age5', checked: false},
   {label: '8 to 12', id: 'age8', checked: false},
   {label: '12 to 16', id: 'age12', checked: false},
@@ -81,7 +81,7 @@ export const ContactForm = () => {
 
   const validateForm = () => {
     const validZipcode =
-      // formik.getFieldProps('zipcode').value.length >= 0 &&
+      formik.getFieldProps('zipcode').value.length >= 0 &&
       !formik.errors.zipcode;
 
     const validPhone =
@@ -95,7 +95,7 @@ export const ContactForm = () => {
   };
 
   const sendData = async (validatedData) => {
-    const now = await moment().format('MMM DD, YYYY HH:MM');
+    const now = await moment().format('MMM DD, YYYY h:mm a');
     const {firstName, lastName, zipcode, phone} = validatedData;
     const agesData = convertCheckboxData(ages);
     const adultClassTimesData = convertCheckboxData(adultClassTimes);
