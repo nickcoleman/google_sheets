@@ -1,6 +1,7 @@
-import Promotion from './Promotion'
+import Promotion from './Promotion';
 
-export { default as Promotion } from './Promotion';
-export { default as Card } from './Card';
+export {default as Content} from './Content';
+export {default as Promotion} from './Promotion';
+export {default as ContactForm} from './ContactForm';
 
-export default Promotion
+export default Promotion;
