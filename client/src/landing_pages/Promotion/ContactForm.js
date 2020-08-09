@@ -7,6 +7,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import {BASE_URL_LANDING} from 'helpers/constants';
 
+import useStyles from './ContactForm.styles';
 import AbstractCheckboxGroup from 'shared/AbstractCheckboxGroup';
 
 const initialAges = [
@@ -58,6 +59,8 @@ const validate = (values) => {
 };
 
 export const ContactForm = () => {
+  const classes = useStyles();
+
   const [ages, setAges] = React.useState(initialAges);
   const [adultClassTimes, setAdultClassTimes] = React.useState(
     initialAdultClassTimes
@@ -127,9 +130,9 @@ export const ContactForm = () => {
       setAdultClassTimes(initialAdultClassTimes);
       setContactDays(initialContactDays);
       setContactTimes(initialContactTimes);
-      // TODO: Redirect to Success Page
+      window.location.href = '/thankyou';
     } catch (error) {
-      // TODO: Redirect to Error Page
+      console.error(error);
     }
   };
 
@@ -184,7 +187,7 @@ export const ContactForm = () => {
               onChange={formik.handleChange}
             />
             {formik.touched.zipcode && formik.errors.zipcode ? (
-              <div style={{color: 'red'}}>{formik.errors.zipcode}</div>
+              <div className={classes.error}>{formik.errors.zipcode}</div>
             ) : null}
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -200,7 +203,7 @@ export const ContactForm = () => {
               onChange={formik.handleChange}
             />
             {formik.touched.phone && formik.errors.phone ? (
-              <div style={{color: 'red'}}>{formik.errors.phone}</div>
+              <div className={classes.error}>{formik.errors.phone}</div>
             ) : null}
           </Grid>
           <Grid item xs={12}>
