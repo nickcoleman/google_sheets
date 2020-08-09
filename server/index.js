@@ -46,7 +46,7 @@ app.post('/landing/contact', (req, res) => {
   const gsrun = async () => {
     const updateOptions = {
       spreadsheetId: keys.spreadsheet_id,
-      range: 'Example!A1',
+      range: 'Promotion!A1:W1',
       insertDataOption: 'INSERT_ROWS',
       valueInputOption: 'USER_ENTERED',
       includeValuesInResponse: true,

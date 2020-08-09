@@ -1,31 +1,27 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardMedia from '@material-ui/core/CardMedia';
 
 import logo from 'assets/logo-main-300x195.png';
+import useStyles from './Header.styles';
 
 export const Header = () => {
+  const classes = useStyles();
+
   return (
-    <Container>
-      <Grid container spacing={4} direction='column' alignItems='center'>
-        <Grid item xs={12}>
-          <div>
-            <img
-              src={logo}
-              title='Premier Martial Arts'
-              style={{maxWidth: '70%'}}
-              alt='Premier Martial Arts'
-            />
-          </div>
-        </Grid>
-        <Grid item xs={12} align='center'>
-          <Typography variant='h3'>
-            Empowering lives through Martial Arts
-          </Typography>
-        </Grid>
-      </Grid>
-    </Container>
+    <Card className={classes.card}>
+      <CardMedia
+        className={classes.media}
+        image={logo}
+        title='Premier Martial Arts'
+        alt='Premier Martial Arts'
+      />
+      <CardHeader
+        className={classes.cardHeader}
+        title='Empowering lives through Martial Arts'
+      />
+    </Card>
   );
 };
 

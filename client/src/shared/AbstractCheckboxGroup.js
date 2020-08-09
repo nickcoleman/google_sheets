@@ -8,31 +8,29 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Grid from '@material-ui/core/Grid';
 
-const CheckboxGroup = ({values, label, onChange}) => (
-  <Grid container>
-    <FormControl component='fieldset' style={{width: '100%'}}>
-      <FormLabel component='legend'>{label}</FormLabel>
-      <FormGroup
-        style={{
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-around',
-        }}
-      >
-        {values.map((value, index) => (
-          <FormControlLabel
-            key={index}
-            control={
-              <Checkbox checked={value.checked} onChange={onChange(index)} />
-            }
-            label={value.label}
-          />
-        ))}
-      </FormGroup>
-    </FormControl>
-  </Grid>
-);
+import useStyles from './AbstractCheckboxGroup.styles';
+
+const CheckboxGroup = ({values, label, onChange}) => {
+  const classes = useStyles();
+  return (
+    <Grid container>
+      <FormControl component='fieldset' className={classes.formGroup}>
+        <FormLabel component='legend'>{label}</FormLabel>
+        <FormGroup className={classes.formGroup}>
+          {values.map((value, index) => (
+            <FormControlLabel
+              key={index}
+              control={
+                <Checkbox checked={value.checked} onChange={onChange(index)} />
+              }
+              label={value.label}
+            />
+          ))}
+        </FormGroup>
+      </FormControl>
+    </Grid>
+  );
+};
 
 CheckboxGroup.propTypes = {
   label: PropTypes.string,

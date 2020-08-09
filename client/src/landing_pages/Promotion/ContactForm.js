@@ -91,7 +91,7 @@ export const ContactForm = () => {
   };
 
   const convertCheckboxData = (data) => {
-    return data.map((item) => (item.checked ? 'Y' : 'N'));
+    return data.map((item) => (item.checked ? 'Y' : ' '));
   };
 
   const sendData = async (validatedData) => {
@@ -109,8 +109,8 @@ export const ContactForm = () => {
         phone,
         ...agesData,
         ...adultClassTimesData,
-        ...contactDaysData,
         ...contactTimesData,
+        ...contactDaysData,
         now,
       ],
     ];
@@ -151,6 +151,7 @@ export const ContactForm = () => {
               variant='outlined'
               margin='normal'
               required
+              fullWidth
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
               value={formik.values.firstName}
@@ -164,6 +165,7 @@ export const ContactForm = () => {
               variant='outlined'
               margin='normal'
               required
+              fullWidth
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
               value={formik.values.lastName}
@@ -177,7 +179,6 @@ export const ContactForm = () => {
               variant='outlined'
               margin='normal'
               required
-              fullWidth
               value={formik.values.zipcode}
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
@@ -194,7 +195,6 @@ export const ContactForm = () => {
               variant='outlined'
               margin='normal'
               required
-              fullWidth
               value={formik.values.phone}
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
