@@ -7,7 +7,7 @@ import ContactForm from './ContactForm';
 
 const Promotion = () => {
   return (
-    <Container style={{margin: '20px auto'}}>
+    <Container>
       <Header />
       <Content />
       <ContactForm />
