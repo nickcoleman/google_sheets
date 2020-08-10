@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import {useFormik} from 'formik';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
@@ -60,7 +61,7 @@ const validate = (values) => {
 
 export const ContactForm = () => {
   const classes = useStyles();
-
+  const [sending, setSending] = React.useState(false);
   const [ages, setAges] = React.useState(initialAges);
   const [adultClassTimes, setAdultClassTimes] = React.useState(
     initialAdultClassTimes
@@ -98,6 +99,7 @@ export const ContactForm = () => {
   };
 
   const sendData = async (validatedData) => {
+    setSending(true);
     const now = await moment().format('MMM DD, YYYY h:mm a');
     const {firstName, lastName, zipcode, phone} = validatedData;
     const agesData = convertCheckboxData(ages);
@@ -135,6 +137,13 @@ export const ContactForm = () => {
       console.error(error);
     }
   };
+
+  if (sending)
+    return (
+      <Container align='center'>
+        <CircularProgress />
+      </Container>
+    );
 
   return (
     <Container maxWidth='md'>
