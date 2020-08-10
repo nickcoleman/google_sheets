@@ -218,22 +218,22 @@ export const ContactForm = () => {
               <div className={classes.error}>{formik.errors.phone}</div>
             ) : null}
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} align='center'>
             <AbstractCheckboxGroup
               groupLabel='What ages are registering for your FREE lesson(s)? (select all that apply)'
               values={ages}
               setValues={setAges}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} align='center'>
             <AbstractCheckboxGroup
               groupLabel='If you attended our adult classes, are you interested in (select all that apply)'
               values={adultClassTimes}
               setValues={setAdultClassTimes}
             />
           </Grid>
-          <Grid item xs={12}>
-            <Typography align='center' className={classes.callingYou}>
+          <Grid item xs={12} align='center'>
+            <Typography className={classes.callingYou}>
               We will be calling you soon to schedule your Free Martial arts
               lesson!
             </Typography>
