@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
   media: {
-    width: 300,
-    height: 195,
+    width: 150,
+    height: 150,
   },
 }));
 
