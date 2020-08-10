@@ -1,11 +1,14 @@
 import React from 'react';
 import moment from 'moment';
 import {useFormik} from 'formik';
+
+import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+
 import {BASE_URL_LANDING} from 'helpers/constants';
 
 import useStyles from './ContactForm.styles';
@@ -230,8 +233,12 @@ export const ContactForm = () => {
             />
           </Grid>
           <Grid item xs={12}>
+            <Typography align='center' className={classes.callingYou}>
+              We will be calling you soon to schedule your Free Martial arts
+              lesson!
+            </Typography>
             <AbstractCheckboxGroup
-              groupLabel='We will be calling you soon to schedule your Free Martial arts lesson!  When would you like us to reach out? Please select all that apply'
+              groupLabel='When would you like us to reach out? (select all that apply)'
               values={contactTimes}
               setValues={setContactTimes}
             />

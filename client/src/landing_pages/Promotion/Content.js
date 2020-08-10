@@ -9,14 +9,11 @@ export const Card = () => {
   return (
     <Container maxWidth='md' className={classes.container}>
       <Typography>
-        Duis ultrices arcu eu erat feugiat, in congue lorem gravida. Suspendisse
-        potenti. Nullam varius lectus quis vestibulum laoreet. Duis sit amet
-        ligula turpis. Vestibulum ante ipsum primis in faucibus orci luctus et
-        ultrices posuere cubilia curae; Nam pellentesque nisl augue. Maecenas
-        ultrices nisl vel congue cursus. Mauris hendrerit nibh sodales nibh
-        imperdiet mollis molestie id justo. In gravida orci arcu, quis dictum
-        ante viverra vel. Integer dolor enim, volutpat eget efficitur sed,
-        finibus eu orci.
+        Provide some info on the promotion. Duis ultrices arcu eu erat feugiat,
+        in congue lorem gravida. Suspendisse potenti. Nullam varius lectus quis
+        vestibulum laoreet. Duis sit amet ligula turpis. Duis ultrices arcu eu
+        erat feugiat, in congue lorem gravida. Suspendisse potenti. Nullam
+        varius lectus quis vestibulum laoreet. Duis sit amet ligula turpis.
       </Typography>
     </Container>
   );
