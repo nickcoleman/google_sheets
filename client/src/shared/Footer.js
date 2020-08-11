@@ -1,31 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 
-import logo from 'assets/logo-refined-harmony.png';
+import useStyles from './Footer.styles';
 
-import useStyles from './Content.styles';
-
-export const Content = () => {
+const Footer = ({logo}) => {
   const classes = useStyles();
   return (
     <Container align='center' className={classes.container}>
       <Card className={classes.card} elevation={0}>
-        <CardMedia
-          className={classes.media}
-          image={logo}
-          title='Martial Arts'
-          alt='Martial Arts'
-        />
+        <CardMedia title='Refined Harmony' alt='Refined Harmony'>
+          <img src={logo} className={classes.media} />
+        </CardMedia>
       </Card>
       <Typography className={classes.content}>
-        PLEASE FILL OUT THE BELOW INFORMATION SO WE CAN SCHEDULE YOUR{' '}
-        <u>FREE</u> MARTIAL ARTS CLASS
+        DOING BUSINESS AS PREMIER MARTIAL ARTS UTAH
       </Typography>
     </Container>
   );
 };
 
-export default Content;
+Footer.propTypes = {
+  logo: PropTypes.string,
+};
+
+export default Footer;

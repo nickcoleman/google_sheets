@@ -1,7 +1,7 @@
-import { createMuiTheme } from "@material-ui/core";
+import {createMuiTheme} from '@material-ui/core';
 
 const typography = {
-  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+  fontFamily: '"Oswald", "Open Sans", sans-serif',
   fontWeightLight: 300,
   fontWeightRegular: 400,
   fontWeightMedium: 500,
@@ -10,19 +10,24 @@ const typography = {
 };
 
 const palette = {
-  primary: { main: '#424242' },
-  secondary: { main: '#00C853' }
-}
+  primary: {main: '#424242'},
+  secondary: {main: '#00C853'},
+  colors: {
+    black: 'black',
+    gray: '#627675',
+    maroon: 'rgb(112, 19, 112)',
+  },
+};
 
-const overrides = {}
+const overrides = {};
 
-const breakpoints = {}
+const breakpoints = {};
 
 const defaultTheme = {
   breakpoints,
   palette,
   typography,
   overrides,
-}
+};
 
-export default createMuiTheme({ ...defaultTheme });
+export default createMuiTheme({...defaultTheme});

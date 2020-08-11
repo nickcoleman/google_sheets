@@ -5,7 +5,9 @@ const useStyles = makeStyles((theme) => ({
     color: 'red',
   },
   callingYou: {
-    marginBottom: theme.spacing(2),
+    fontWeight: 'bold',
+    color: theme.palette.colors.black,
+    marginBottom: theme.spacing(1),
   },
 }));
 

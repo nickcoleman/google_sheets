@@ -7,12 +7,12 @@ import Grid from '@material-ui/core/Grid';
 import ColorBar from 'shared/ColorBar';
 import Footer from 'shared/Footer';
 import Content from './Content';
-import logo from 'assets/refined-harmony.png';
+
+import logo from 'assets/refined-harmony-green.png';
 
 const ThankYou = () => {
   return (
-    <Container maxWidth='md' direction='column'>
-      <ColorBar />
+    <Container>
       <Content />
       <Footer logo={logo} />
     </Container>

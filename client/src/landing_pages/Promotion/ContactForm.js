@@ -238,7 +238,7 @@ export const ContactForm = () => {
               lesson!
             </Typography>
             <AbstractCheckboxGroup
-              groupLabel='When would you like us to reach out? (select all that apply)'
+              groupLabel='When would you like us to reach out? Please select all that apply.'
               values={contactTimes}
               setValues={setContactTimes}
             />

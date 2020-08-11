@@ -2,16 +2,16 @@ import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    flex: '1 0 auto',
     padding: theme.spacing(2),
   },
-  title: {
-    fontSize: '1.5em',
-    padding: '20px 0px',
+  content: {
+    margin: '0px auto',
   },
-  link: {
-    fontSize: '1.25em',
-    color: 'blue',
+  iconButton: {
+    margin: theme.spacing(1),
+  },
+  location: {
+    paddingLeft: theme.spacing(1),
   },
 }));
 

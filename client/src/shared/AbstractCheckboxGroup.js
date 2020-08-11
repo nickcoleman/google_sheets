@@ -15,7 +15,9 @@ const CheckboxGroup = ({values, label, onChange}) => {
   return (
     <Grid container>
       <FormControl component='fieldset' className={classes.formGroup}>
-        <FormLabel component='legend'>{label}</FormLabel>
+        <FormLabel component='legend' className={classes.formLabel}>
+          {label}
+        </FormLabel>
         <FormGroup className={classes.formGroup}>
           {values.map((value, index) => (
             <FormControlLabel

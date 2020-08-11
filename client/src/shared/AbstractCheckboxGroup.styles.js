@@ -10,6 +10,11 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     justifyContent: 'space-around',
   },
+  formLabel: {
+    fontWeight: 'bold',
+    color: theme.palette.colors.black,
+    marginBottom: theme.spacing(2),
+  },
 }));
 
 export default useStyles;
