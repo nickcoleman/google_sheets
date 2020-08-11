@@ -4,14 +4,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 
 import useStyles from './ColorBar.styles';
 
-export const ColorBar = ({backgroundColor}) => {
+export const ColorBar = () => {
   const classes = useStyles();
 
   return <Toolbar className={classes.toolbar} />;
-};
-
-ColorBar.propTypes = {
-  backgroundColor: PropTypes.string,
 };
 
 export default ColorBar;
