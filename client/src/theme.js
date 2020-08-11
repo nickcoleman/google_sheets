@@ -16,6 +16,7 @@ const palette = {
     black: 'black',
     gray: '#627675',
     maroon: 'rgb(112, 19, 112)',
+    green: '#00C853',
   },
 };
 
