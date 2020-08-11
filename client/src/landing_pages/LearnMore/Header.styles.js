@@ -3,7 +3,7 @@ import {makeStyles} from '@material-ui/styles';
 const useStyles = makeStyles((theme) => ({
   colorBar: {
     zIndex: 0,
-    backgroundColor: 'green',
+    backgroundColor: '#00C853',
     height: 50,
   },
   logoBox: {
@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     height: 'auto',
-    width: 300,
+    width: '50%',
   },
 }));
 

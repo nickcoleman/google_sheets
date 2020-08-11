@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <Container>
       <div className={classes.colorBar} />
-      <Box align='center' className={classes.colorBar}>
+      <Box align='center' className={classes.logoBox}>
         <img src={pmaLogo} className={classes.logo} />
       </Box>
     </Container>

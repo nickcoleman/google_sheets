@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.colors.green,
   },
   location: {
+    fonstSize: '1.25em',
     color: theme.palette.colors.green,
   },
   img: {
