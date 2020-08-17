@@ -9,12 +9,9 @@ import useStyles from './Header.styles';
 const Header = () => {
   const classes = useStyles();
   return (
-    <Container>
-      <div className={classes.colorBar} />
-      <Box align='center' className={classes.logoBox}>
-        <img src={pmaLogo} className={classes.logo} />
-      </Box>
-    </Container>
+    <Box align='center' className={classes.logoBox}>
+      <img alt="PMA logo" src={pmaLogo} className={classes.logo} />
+    </Box>
   );
 };
 

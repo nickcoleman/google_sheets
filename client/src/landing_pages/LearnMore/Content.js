@@ -32,12 +32,12 @@ export const Content = () => {
           </Grid>
           <Grid item xs={3}>
             <Typography variant='title' className={classes.location}>
-              Alpine
+              Draper
             </Typography>
           </Grid>
           <Grid item xs={3}>
             <Typography variant='title' className={classes.location}>
-              Draper
+              Alpine
             </Typography>
           </Grid>
         </Grid>
@@ -119,7 +119,7 @@ export const Content = () => {
                 <img
                   src={alpine2}
                   className={classes.img}
-                  alt='Alipine Instagram'
+                  alt='Alpine Instagram'
                 />
               </IconButton>
             </Box>
@@ -134,7 +134,7 @@ export const Content = () => {
                 <img
                   src={comingSoon}
                   className={classes.img}
-                  alt='Comming Soon Instagram'
+                  alt='Coming Soon Instagram'
                 />
               </IconButton>
             </Box>

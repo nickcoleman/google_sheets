@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import Container from '@material-ui/core/Container';
 
 import Content from './Content';
@@ -12,13 +12,15 @@ import useStyles from './Promotion.styles';
 const Promotion = () => {
   const classes = useStyles();
   return (
-    <Container maxWidth='md' className={classes.container}>
+    <>
       <ColorBar />
-      <Content />
-      <ContactForm />
-      <Footer logo={logo} />
+      <Container maxWidth='md' className={classes.container}>
+        <Content />
+        <ContactForm />
+        <Footer logo={logo} />
+      </Container>
       <ColorBar />
-    </Container>
+    </>
   );
 };
 

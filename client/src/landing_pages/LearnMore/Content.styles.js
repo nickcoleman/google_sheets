@@ -1,5 +1,4 @@
 import {makeStyles} from '@material-ui/styles';
-import {rgbToHex} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   container: {

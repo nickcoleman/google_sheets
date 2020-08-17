@@ -15,31 +15,18 @@ import useStyles from './ContactForm.styles';
 import AbstractCheckboxGroup from 'shared/AbstractCheckboxGroup';
 
 const initialAges = [
-  {label: '3 to 4', id: 'age3', checked: false},
-  {label: '5 to 7', id: 'age5', checked: false},
-  {label: '8 to 12', id: 'age8', checked: false},
-  {label: '12 to 16', id: 'age12', checked: false},
+  {label: '3-4', id: 'age3', checked: false},
+  {label: '5-7', id: 'age5', checked: false},
+  {label: '8-12', id: 'age8', checked: false},
+  {label: '12-16', id: 'age12', checked: false},
   {label: 'No Kids', id: 'noKids', checked: false},
   {label: 'Adult', id: 'adult', checked: false},
-];
-
-const initialAdultClassTimes = [
-  {label: 'Mornings 8am – 10am', id: 'morningClass', checked: false},
-  {label: 'Evenings 6pm - 8pm', id: 'eveningClass', checked: false},
 ];
 
 const initialContactTimes = [
   {label: 'Anytime', id: 'contactAnytime', checked: false},
   {label: '8am – 12pm', id: 'contactMorning', checked: false},
   {label: '1pm - 5pm', id: 'contactAfternoon', checked: false},
-];
-
-const initialContactDays = [
-  {label: 'Mon', id: 'contactMon', checked: false},
-  {label: 'Tue', id: 'contactTue', checked: false},
-  {label: 'Wed', id: 'contactWed', checked: false},
-  {label: 'Thu', id: 'contactThu', checked: false},
-  {label: 'Fri', id: 'contactFri', checked: false},
 ];
 
 const validate = (values) => {
@@ -66,11 +53,7 @@ export const ContactForm = () => {
   const classes = useStyles();
   const [sending, setSending] = React.useState(false);
   const [ages, setAges] = React.useState(initialAges);
-  const [adultClassTimes, setAdultClassTimes] = React.useState(
-    initialAdultClassTimes
-  );
   const [contactTimes, setContactTimes] = React.useState(initialContactTimes);
-  const [contactDays, setContactDays] = React.useState(initialContactDays);
 
   const formik = useFormik({
     initialValues: {
@@ -78,6 +61,8 @@ export const ContactForm = () => {
       lastName: '',
       zipcode: '',
       phone: '',
+      referralName: '',
+      referralPhone: '',
     },
     onSubmit: async (values, {resetForm}) => {
       sendData(values);
@@ -104,10 +89,8 @@ export const ContactForm = () => {
   const sendData = async (validatedData) => {
     setSending(true);
     const now = await moment().format('MMM DD, YYYY h:mm a');
-    const {firstName, lastName, zipcode, phone} = validatedData;
+    const {firstName, lastName, zipcode, phone, referralName, referralPhone} = validatedData;
     const agesData = convertCheckboxData(ages);
-    const adultClassTimesData = convertCheckboxData(adultClassTimes);
-    const contactDaysData = convertCheckboxData(contactDays);
     const contactTimesData = convertCheckboxData(contactTimes);
     const values = [
       [
@@ -116,10 +99,10 @@ export const ContactForm = () => {
         zipcode,
         phone,
         ...agesData,
-        ...adultClassTimesData,
         ...contactTimesData,
-        ...contactDaysData,
         now,
+        referralName,
+        referralPhone
       ],
     ];
 
@@ -132,8 +115,6 @@ export const ContactForm = () => {
         body: JSON.stringify(values),
       });
       setAges(initialAges);
-      setAdultClassTimes(initialAdultClassTimes);
-      setContactDays(initialContactDays);
       setContactTimes(initialContactTimes);
       window.location.href = '/thankyou';
     } catch (error) {
@@ -149,22 +130,22 @@ export const ContactForm = () => {
     );
 
   return (
-    <Container maxWidth='md'>
+    <Container maxWidth="md">
       <form
-        className='input-form'
-        id='contact'
-        name='contact'
+        className="input-form"
+        id="contact"
+        name="contact"
         required
         onSubmit={formik.handleSubmit}
       >
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
             <TextField
-              label='First Name'
-              name='firstName'
-              id='firstName'
-              variant='outlined'
-              margin='normal'
+              label="First Name"
+              name="firstName"
+              id="firstName"
+              variant="outlined"
+              margin="normal"
               required
               fullWidth
               onBlur={formik.handleBlur}
@@ -174,11 +155,11 @@ export const ContactForm = () => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
-              label='Last Name'
-              name='lastName'
-              id='lastName'
-              variant='outlined'
-              margin='normal'
+              label="Last Name"
+              name="lastName"
+              id="lastName"
+              variant="outlined"
+              margin="normal"
               required
               fullWidth
               onBlur={formik.handleBlur}
@@ -188,11 +169,11 @@ export const ContactForm = () => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
-              label='Zipcode'
-              name='zipcode'
-              id='zipcode'
-              variant='outlined'
-              margin='normal'
+              label="Zipcode"
+              name="zipcode"
+              id="zipcode"
+              variant="outlined"
+              margin="normal"
               required
               value={formik.values.zipcode}
               onBlur={formik.handleBlur}
@@ -204,11 +185,11 @@ export const ContactForm = () => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
-              label='Phone Number'
-              name='phone'
-              id='phone'
-              variant='outlined'
-              margin='normal'
+              label="Phone Number"
+              name="phone"
+              id="phone"
+              variant="outlined"
+              margin="normal"
               required
               value={formik.values.phone}
               onBlur={formik.handleBlur}
@@ -226,36 +207,56 @@ export const ContactForm = () => {
             />
           </Grid>
           <Grid item xs={12} align='center'>
-            <AbstractCheckboxGroup
-              groupLabel='If you attended our adult classes, are you interested in (select all that apply)'
-              values={adultClassTimes}
-              setValues={setAdultClassTimes}
-            />
-          </Grid>
-          <Grid item xs={12} align='center'>
             <Typography className={classes.callingYou}>
               We will be calling you soon to schedule your Free Martial arts
               lesson!
             </Typography>
             <AbstractCheckboxGroup
-              groupLabel='When would you like us to reach out? Please select all that apply.'
+              groupLabel="When do you prefer to be contacted?"
               values={contactTimes}
               setValues={setContactTimes}
             />
-            <AbstractCheckboxGroup
-              groupLabel=''
-              values={contactDays}
-              setValues={setContactDays}
+          </Grid>
+          <Grid item xs={12} align="center">
+            <Typography className={classes.callingYou}>
+              Do you have a friend that would be interested in a FREE martial
+              arts or self-defense lesson?
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              label="Friend's Name"
+              name="referralName"
+              id="referralName"
+              variant="outlined"
+              margin="normal"
+              fullWidth
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              value={formik.values.referralName}
             />
           </Grid>
-          <Grid item xs={12} align='center'>
+          <Grid item xs={12} sm={6}>
+            <TextField
+              label="Friend's Phone Number"
+              name="referralPhone"
+              id="referralPhone"
+              variant="outlined"
+              margin="normal"
+              fullWidth
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              value={formik.values.referralPhone}
+            />
+          </Grid>
+          <Grid item xs={12} align="center">
             <Button
-              type='submit'
+              type="submit"
               disabled={validateForm()}
-              variant='contained'
-              color='secondary'
+              variant="contained"
+              color="secondary"
             >
-              Send
+              Submit
             </Button>
           </Grid>
         </Grid>

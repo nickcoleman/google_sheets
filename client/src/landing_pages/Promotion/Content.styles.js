@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
     height: 150,
   },
   content: {
-    fontFamily: 'Bebas Neue, Roboto, sans-serif',
-    fontSize: '1.3em',
+    fontFamily: 'Roboto, sans-serif',
+    fontWeight: 'bold',
   },
 }));
 

@@ -2,8 +2,7 @@ import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    // flexShrink: 0,
-    marginTop: 50,
+    margin: '50px 0',
   },
   imageBox: {
     margin: '20px auto',

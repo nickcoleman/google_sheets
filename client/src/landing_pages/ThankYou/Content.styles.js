@@ -9,9 +9,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.5em',
     padding: '20px 0px',
   },
-  link: {
+  cta: {
     fontSize: '1.25em',
-    color: 'blue',
+    color: 'white',
+    backgroundColor: theme.palette.colors.maroon,
+    padding: '4px 24px',
+    margin: '13vh 0'
   },
 }));
 

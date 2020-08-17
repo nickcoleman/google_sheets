@@ -11,18 +11,18 @@ import useStyles from './Content.styles';
 export const Content = () => {
   const classes = useStyles();
   return (
-    <Container align='center' className={classes.container}>
+    <Container align="center" className={classes.container}>
       <Card className={classes.card} elevation={0}>
         <CardMedia
           className={classes.media}
           image={logo}
-          title='Martial Arts'
-          alt='Martial Arts'
+          title="Martial Arts"
+          alt="Martial Arts"
         />
       </Card>
       <Typography className={classes.content}>
-        PLEASE FILL OUT THE BELOW INFORMATION SO WE CAN SCHEDULE YOUR{' '}
-        <u>FREE</u> MARTIAL ARTS CLASS
+        Enter the below information to confirm or schedule your FREE martial
+        arts lesson PLUS be entered into our monthly giveaway!
       </Typography>
     </Container>
   );
