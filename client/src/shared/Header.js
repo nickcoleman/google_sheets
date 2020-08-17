@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
+// import Container from '@material-ui/core/Container';
 import pmaLogo from 'assets/logo-pma.png';
 
 import useStyles from './Header.styles';

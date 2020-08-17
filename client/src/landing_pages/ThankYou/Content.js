@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 // import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
+// import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 // import IconButton from '@material-ui/core/IconButton';
 
@@ -20,9 +20,8 @@ export const Content = () => {
         be contacting you soon to schedule or confirm your free appointment!
       </Typography>
 
-      <Button href="/learnmore" className={classes.cta}>
-        Click here
-        Learn more about Premier Martial Arts Utah
+      <Button id="cta-thankyou" href="/learnmore" className={classes.cta}>
+        Click here to learn more about Premier Martial Arts Utah
       </Button>
     </Container>
   );
