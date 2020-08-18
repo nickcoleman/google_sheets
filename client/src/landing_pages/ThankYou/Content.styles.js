@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     backgroundColor: theme.palette.colors.maroon,
     padding: '4px 24px',
-    margin: '13vh 0'
+    margin: '13vh 0',
+    whiteSpace: "pre-wrap"
   },
 }));
 

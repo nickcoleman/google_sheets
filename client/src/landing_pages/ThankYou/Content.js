@@ -21,7 +21,8 @@ export const Content = () => {
       </Typography>
 
       <Button id="cta-thankyou" href="/learnmore" className={classes.cta}>
-        Click here to learn more about Premier Martial Arts Utah
+        {`Click here
+Learn more about Premier Martial Arts Utah`}
       </Button>
     </Container>
   );
