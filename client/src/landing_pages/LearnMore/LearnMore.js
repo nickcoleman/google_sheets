@@ -22,7 +22,7 @@ const LearnMore = () => {
         <Typography className={classes.footer}>
           Subsidiary of Refined Harmony Premier
         </Typography>
-        <img className={classes.logo} src={logo}></img>
+        <img alt='refinedharmony premier logo' className={classes.logo} src={logo}></img>
       </Container>
       <div className={classes.header}></div>
     </>

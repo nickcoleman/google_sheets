@@ -12,7 +12,7 @@ export const Content = () => {
   const classes = useStyles();
   return (
     <Container align="center" className={classes.container}>
-      <img className={classes.logo} src={logo}></img>
+      <img alt='refined harmony premier logo' className={classes.logo} src={logo}></img>
       <Typography className={classes.dba}>
         Doing Business as Premier Martial Arts Utah
       </Typography>
