@@ -1,11 +1,13 @@
 import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
+  header: {
+    height: "64px", 
+    backgroundColor: "#20AE4B", 
+    zIndex: -1 
+  },
   container: {
     padding: theme.spacing(2),
-  },
-  content: {
-    margin: '0px auto',
   },
   socialBox: {
     height: '100%',
@@ -18,13 +20,22 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.colors.green,
   },
   location: {
-    fonstSize: '1.25em',
+    fontSize: '1em',
     color: theme.palette.colors.green,
   },
   img: {
     height: 'auto',
     width: '100%',
   },
+  logo: {
+    display: 'block',
+    height: 'auto',
+    width: '70%',
+    margin: '10px auto 20px'
+  },
+  footer: {
+    textAlign: 'center'
+  }
 }));
 
 export default useStyles;

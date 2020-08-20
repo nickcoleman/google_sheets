@@ -6,9 +6,8 @@ const useStyles = makeStyles((theme) => ({
   },
   callingYou: {
     fontWeight: 'bold',
-    color: theme.palette.colors.black,
-    marginBottom: theme.spacing(1),
-  },
+    fontFamily: 'Roboto'
+  }
 }));
 
 export default useStyles;

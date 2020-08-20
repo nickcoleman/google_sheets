@@ -15,8 +15,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.colors.maroon,
     padding: '4px 24px',
     margin: '13vh 0',
-    whiteSpace: "pre-wrap"
+    whiteSpace: "pre-wrap",
+    '&:hover': {
+      backgroundColor: '#b14f7c'
+    }
   },
+  gif: {
+    width: "auto",
+    height: 250,
+    margin: "10px 0" 
+  }
 }));
 
 export default useStyles;

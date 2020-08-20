@@ -207,10 +207,6 @@ export const ContactForm = () => {
             />
           </Grid>
           <Grid item xs={12} align='center'>
-            <Typography className={classes.callingYou}>
-              We will be calling you soon to schedule your Free Martial arts
-              lesson!
-            </Typography>
             <AbstractCheckboxGroup
               groupLabel="When do you prefer to be contacted?"
               values={contactTimes}

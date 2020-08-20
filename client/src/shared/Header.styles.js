@@ -12,7 +12,7 @@ const useStyles = makeStyles( theme => ({
   },
   logo: {
     height: "auto",
-    width: "50%",
+    width: "25%",
   },
 }));
 
