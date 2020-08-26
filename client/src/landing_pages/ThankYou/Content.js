@@ -2,13 +2,6 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-// import Grid from '@material-ui/core/Grid';
-// import Link from '@material-ui/core/Link';
-// import IconButton from '@material-ui/core/IconButton';
-
-// import Facebook from 'mdi-material-ui/Facebook';
-// import Instagram from 'mdi-material-ui/Instagram';
-// import { TextareaAutosize } from '@material-ui/core';
 import useStyles from './Content.styles';
 
 export const Content = () => {

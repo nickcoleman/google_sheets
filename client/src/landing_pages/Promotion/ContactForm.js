@@ -13,6 +13,7 @@ import {BASE_URL_LANDING} from 'helpers/constants';
 
 import useStyles from './ContactForm.styles';
 import AbstractCheckboxGroup from 'shared/AbstractCheckboxGroup';
+import validate from '../../helpers/formValidation'
 
 const initialAges = [
   {label: '3-4', id: 'age3', checked: false},
@@ -29,36 +30,18 @@ const initialContactTimes = [
   {label: '1pm - 5pm', id: 'contactAfternoon', checked: false},
 ];
 
-const validate = (values) => {
-  const errors = {};
-
-  if (!values.zipcode) {
-    errors.zipcode = 'Required';
-  } else if (!/^[0-9]{5}(?:-[0-9]{4})?$/i.test(values.zipcode)) {
-    errors.zipcode = 'Enter 5 digit zipcode (e.g. 84105)';
-  }
-
-  if (!values.phone) {
-    errors.phone = 'Required';
-  } else if (
-    !/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/i.test(values.phone)
-  ) {
-    errors.phone = 'Enter valid phone number (e.g. 801-555-1212)';
-  }
-
-  return errors;
-};
-
 export const ContactForm = () => {
   const classes = useStyles();
   const [sending, setSending] = React.useState(false);
   const [ages, setAges] = React.useState(initialAges);
   const [contactTimes, setContactTimes] = React.useState(initialContactTimes);
+  const [terms, setTerms] = React.useState(false);
 
   const formik = useFormik({
     initialValues: {
       firstName: '',
       lastName: '',
+      email: '',
       zipcode: '',
       phone: '',
       referralName: '',
@@ -70,7 +53,7 @@ export const ContactForm = () => {
     },
     validate,
   });
-
+ 
   const validateForm = () => {
     const validZipcode =
       formik.getFieldProps('zipcode').value.length >= 0 &&
@@ -79,7 +62,7 @@ export const ContactForm = () => {
     const validPhone =
       formik.getFieldProps('phone').value.length > 6 && !formik.errors.phone;
 
-    return !(validZipcode && validPhone);
+    return !(validZipcode && validPhone && terms);
   };
 
   const convertCheckboxData = (data) => {
@@ -89,13 +72,14 @@ export const ContactForm = () => {
   const sendData = async (validatedData) => {
     setSending(true);
     const now = await moment().format('MMM DD, YYYY h:mm a');
-    const {firstName, lastName, zipcode, phone, referralName, referralPhone} = validatedData;
+    const {firstName, lastName, email, zipcode, phone, referralName, referralPhone} = validatedData;
     const agesData = convertCheckboxData(ages);
     const contactTimesData = convertCheckboxData(contactTimes);
     const values = [
       [
         firstName,
         lastName,
+        email,
         zipcode,
         phone,
         ...agesData,
@@ -167,7 +151,20 @@ export const ContactForm = () => {
               value={formik.values.lastName}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} md={4}>
+            <TextField
+              label="Email"
+              name="email"
+              id="email"
+              variant="outlined"
+              margin="normal"
+              fullWidth
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              value={formik.values.email}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
             <TextField
               label="Zipcode"
               name="zipcode"
@@ -175,6 +172,7 @@ export const ContactForm = () => {
               variant="outlined"
               margin="normal"
               required
+              fullWidth
               value={formik.values.zipcode}
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
@@ -183,7 +181,7 @@ export const ContactForm = () => {
               <div className={classes.error}>{formik.errors.zipcode}</div>
             ) : null}
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} md={4}>
             <TextField
               label="Phone Number"
               name="phone"
@@ -191,6 +189,7 @@ export const ContactForm = () => {
               variant="outlined"
               margin="normal"
               required
+              fullWidth
               value={formik.values.phone}
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
@@ -199,14 +198,14 @@ export const ContactForm = () => {
               <div className={classes.error}>{formik.errors.phone}</div>
             ) : null}
           </Grid>
-          <Grid item xs={12} align='center'>
+          <Grid item xs={12} align="center">
             <AbstractCheckboxGroup
-              groupLabel='What ages are registering for your FREE lesson(s)? (select all that apply)'
+              groupLabel="What ages are registering for your FREE lesson(s)? (select all that apply)"
               values={ages}
               setValues={setAges}
             />
           </Grid>
-          <Grid item xs={12} align='center'>
+          <Grid item xs={12} align="center">
             <AbstractCheckboxGroup
               groupLabel="When do you prefer to be contacted?"
               values={contactTimes}
@@ -244,6 +243,19 @@ export const ContactForm = () => {
               onChange={formik.handleChange}
               value={formik.values.referralPhone}
             />
+          </Grid>
+          <Grid item xs={12} align="center">
+            <input
+              value={terms}
+              type="checkbox"
+              onChange={(_) => setTerms(!terms)}
+            />
+            <label>
+              {" "}
+              Click here to agree to our <a href="/terms">terms</a> and {" "}
+              <a href="/privacy">privacy policy</a>. We deploy all efforts to
+              protect the private nature of your personal information.
+            </label>
           </Grid>
           <Grid item xs={12} align="center">
             <Button
