@@ -19,7 +19,7 @@ export const Content = () => {
       <img
         className={classes.gif}
         alt="wheel gif"
-        src="https://cdn.lowgif.com/full/56758b23ab947476-winspin-24-editable-tabletop-prize-wheel-lottery-fortune-game.gif"
+        src="https://media.giphy.com/media/kDrFxM2kX3KU9PSglW/giphy.gif"
       />
       <Typography className={classes.title}>
         Congratulations you are now entered into our monthly giveaway! We will
@@ -28,7 +28,7 @@ export const Content = () => {
 
       <Button
         id="cta-thankyou"
-        href="http://pmautah.com/learnmore"
+        href="http://pmautah.com"
         className={classes.cta}
       >
         {`- Click here -

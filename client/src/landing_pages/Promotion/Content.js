@@ -4,7 +4,7 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 
-import logo from 'assets/refined-harmony.png';
+import logo from 'assets/refined-harmony-green.png';
 
 import useStyles from './Content.styles';
 

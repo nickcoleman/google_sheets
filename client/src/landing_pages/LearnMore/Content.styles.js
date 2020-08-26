@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     display: 'block',
     height: 'auto',
-    width: '70%',
+    width: '40%',
     margin: '10px auto 20px'
   },
   footer: {
