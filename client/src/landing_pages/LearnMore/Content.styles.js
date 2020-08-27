@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   gif: {
     display: "block",
-    height: "25vmin",
+    height: "50vmin",
     width: "auto",
     margin: "10px auto 20px",
   },

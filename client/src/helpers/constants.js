@@ -3,10 +3,12 @@ export const BASE_URL = "https://server-287604.wn.r.appspot.com";
 
 export const BASE_URL_LANDING = `${BASE_URL}/landing`;
 
-const WHEEL_GIF = "https://media.giphy.com/media/kDrFxM2kX3KU9PSglW/giphy.gif";
+const HOME_WHEEL_GIF = "https://media.giphy.com/media/h7ow5IzstUfDioNoSP/giphy.gif";
+const THANKS_WHEEL_GIF ="https://media.giphy.com/media/cilJynvz9yLQ4EulVd/giphy.gif";
 
 export default {
   BASE_URL,
   BASE_URL_LANDING,
-  WHEEL_GIF
+  HOME_WHEEL_GIF,
+  THANKS_WHEEL_GIF
 };

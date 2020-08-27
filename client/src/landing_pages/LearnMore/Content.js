@@ -7,7 +7,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Facebook from 'mdi-material-ui/Facebook';
 import Instagram from 'mdi-material-ui/Instagram';
 
-// import comingSoon from 'assets/coming-soon.png';
 import alpine1 from 'assets/alpine-1.png';
 import alpine2 from 'assets/alpine-2.png';
 import riverton1 from 'assets/riverton-1.png';
@@ -109,11 +108,10 @@ export const Content = () => {
           </Grid>
         </Grid>
         <a href="/form">
-          <Typography className={classes.clickToWin}>Click to Win!!</Typography>
           <img
             className={classes.gif}
             alt="spinning wheel"
-            src={cnst.WHEEL_GIF}
+            src={cnst.HOME_WHEEL_GIF}
           />
         </a>
 

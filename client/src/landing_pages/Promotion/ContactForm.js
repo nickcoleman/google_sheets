@@ -252,9 +252,7 @@ export const ContactForm = () => {
             />
             <label>
               {" "}
-              Click here to agree to our <a href="/terms">terms</a> and {" "}
-              <a href="/privacy">privacy policy</a>. We deploy all efforts to
-              protect the private nature of your personal information.
+              Click here to agree to our <a href="/privacy">terms and privacy policy</a>. We deploy all efforts to protect the private nature of your personal information.
             </label>
           </Grid>
           <Grid item xs={12} align="center">
