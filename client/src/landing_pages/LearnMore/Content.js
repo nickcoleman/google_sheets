@@ -118,14 +118,14 @@ export const Content = () => {
         <Typography className={classes.comingSoonTitle}>Coming Soon</Typography>
         <Typography className={classes.listOfCities}>
           {`
+Riverton
+Draper
+South Jordan
+West Jordan
+Stansbury Park
 Alpine
-Alpine
-Alpine
-Alpine
-Alpine
-Alpine
-Alpine
-Alpine
+Pleasant Grove
+Springville
 `}
         </Typography>
         <Typography className={classes.footer}>
