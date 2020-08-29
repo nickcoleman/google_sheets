@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-
+import Header from '../../shared/Header'
 import Content from './Content';
 import ContactForm from './ContactForm';
 import ColorBar from 'shared/ColorBar';
@@ -13,7 +13,7 @@ const Promotion = () => {
   const classes = useStyles();
   return (
     <>
-      <ColorBar />
+      <Header/>
       <Container maxWidth='md' className={classes.container}>
         <Content />
         <ContactForm />

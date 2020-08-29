@@ -7,9 +7,8 @@ import ColorBar from '../../shared/ColorBar';
 const LearnMore = () => {
   return (
     <>
-      <ColorBar />
+      <Header logo />
       <Container>
-        <Header />
         <Content />
       </Container>
       <ColorBar />

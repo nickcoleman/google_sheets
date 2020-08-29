@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-// import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
@@ -18,10 +16,6 @@ const Footer = ({logo}) => {
       </Typography>
     </Container>
   );
-};
-
-Footer.propTypes = {
-  logo: PropTypes.string,
 };
 
 export default Footer;

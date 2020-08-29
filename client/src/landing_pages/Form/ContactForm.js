@@ -200,7 +200,7 @@ export const ContactForm = () => {
           </Grid>
           <Grid item xs={12} align="center">
             <AbstractCheckboxGroup
-              groupLabel="What ages are registering for your FREE lesson(s)? (select all that apply)"
+              groupLabel="What ages are you registering for your FREE lesson(s)? (select all that apply)"
               values={ages}
               setValues={setAges}
             />
@@ -252,7 +252,7 @@ export const ContactForm = () => {
             />
             <label>
               {" "}
-              Click here to agree to our <a href="/privacy">terms and privacy policy</a>. We deploy all efforts to protect the private nature of your personal information.
+              Click here to agree to our <a href="/terms">terms and privacy policy</a>. We deploy all efforts to protect the private nature of your personal information.
             </label>
           </Grid>
           <Grid item xs={12} align="center">
