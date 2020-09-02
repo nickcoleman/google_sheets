@@ -11,17 +11,13 @@ export const Content = () => {
 
   return (
     <Container maxWidth="md" className={classes.container} align="center">
-      <Typography className={classes.title}>
-        Congratulations!
-      </Typography>
       <img
         className={classes.gif}
         alt="wheel gif"
         src={cnst.THANKS_WHEEL_GIF}
       />
       <Typography className={classes.title}>
-        You are now entered into our monthly giveaway. We will
-        be contacting you soon to schedule or confirm your free appointment!
+        We will be contacting you soon to schedule or confirm your free appointment!
       </Typography>
 
       <Button

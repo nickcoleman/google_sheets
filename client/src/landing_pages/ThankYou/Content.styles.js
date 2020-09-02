@@ -21,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   gif: {
-    width: "auto",
-    height: 250,
+    width: '100%',
+    maxWidth: 350,
     margin: "10px 0",
   },
 }));
