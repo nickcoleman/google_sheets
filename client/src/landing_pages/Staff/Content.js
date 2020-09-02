@@ -19,11 +19,12 @@ export default function (){
 }
 
 const style = {
-	container: {
-		margin: '2rem 0',
-		maxWidth: '920px',
-		display: 'grid',
-		gridGap: '2rem',
-		gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'
-	}
-}
+  container: {
+    margin: "2rem 0",
+    // maxWidth: '920px',
+    display: "grid",
+    justifyContent: "center",
+    gridGap: "3.5rem 2rem",
+    gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
+  },
+};
