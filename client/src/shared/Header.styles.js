@@ -18,7 +18,7 @@ const useStyles = makeStyles( theme => ({
   },
   logo: {
     height: "auto",
-    width: "25%",
+    width: "25vmin",
   },
 }));
 
