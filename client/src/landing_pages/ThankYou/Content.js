@@ -17,7 +17,7 @@ export const Content = () => {
         src={cnst.THANKS_WHEEL_GIF}
       />
       <Typography className={classes.title}>
-        We will be contacting you soon to schedule or confirm your free appointment!
+        We will be contacting you soon to schedule or confirm your FREE appointment!
       </Typography>
 
       <Button

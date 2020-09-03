@@ -21,22 +21,26 @@
 .content .position{
 	text-align: center;
 	font-size: 13px;
-    color: #a2a5a4;
+	font-weight: bold;
+    color: #00C853;
 	text-transform: uppercase;
 	font-size: .8em;
+	margin-bottom: 1em;
 }
 .card .experience{
-	line-height: 2em;
-	font-size: 1.4em;
+	line-height: 1.7em;
+	font-size: 1.2em;
 }
 .card .statement{
-	background-color: rgb(207, 207, 207);
+	color: white;
+	background-color: #00C853;
 	padding: 1rem;
 	font-size: .8em;
 	line-height: 1.8em;
 }
 .card .readMore {
 	font-size: .8em;
-	color: #dd3333;
+	color: #00C853;
 	cursor: pointer;
+	margin: 10px 0;
 }

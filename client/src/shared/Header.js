@@ -1,5 +1,5 @@
 import React from 'react';
-import ColorBar from '../shared/ColorBar'
+import Navigation from '../shared/Navigation'
 import Box from '@material-ui/core/Box';
 import pmaLogo from 'assets/logo-pma.png';
 
@@ -9,7 +9,9 @@ const Header = ({logo}) => {
   const classes = useStyles();
   return (
     <>
-      <ColorBar/>
+      <div className={classes.bar}>
+        <Navigation/>
+      </div>
       {logo && 
       <Box align='center' className={classes.logoBox}>
         <img alt="PMA logo" src={pmaLogo} className={classes.logo} />

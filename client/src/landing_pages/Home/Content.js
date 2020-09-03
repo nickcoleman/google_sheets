@@ -7,10 +7,11 @@ import IconButton from '@material-ui/core/IconButton';
 import Facebook from 'mdi-material-ui/Facebook';
 import Instagram from 'mdi-material-ui/Instagram';
 
-import alpine1 from 'assets/alpine-1.png';
-import alpine2 from 'assets/alpine-2.png';
-import riverton1 from 'assets/riverton-1.png';
-import riverton2 from 'assets/riverton-2.png';
+import riv1 from '../../assets/punch.png';
+import riv2 from '../../assets/team.png';
+import drap1 from '../../assets/cs_gi.png';
+import drap2 from '../../assets/cs_blk_shirts.png';
+
 
 import logo from "assets/refined-harmony-green.png";
 import cnst from "../../helpers/constants";
@@ -46,26 +47,26 @@ export const Content = () => {
             </Box>
           </Grid>
           <Grid item xs={5}>
-            <IconButton
+            <a
               target="_blank"
               href="https://www.facebook.com/premiermartialartsriverton/"
             >
               <img
-                src={riverton1}
+                src={riv1}
                 className={classes.img}
                 alt="Riverton Facebook"
               />
-            </IconButton>
+            </a>
           </Grid>
           <Grid item xs={5}>
             <Box>
-              <IconButton
+              <a
                 className={classes.iconButton}
                 target="_blank"
                 href="#"
               >
-                <img src={alpine1} className={classes.img} alt="alpine1" />
-              </IconButton>
+                <img src={drap1} className={classes.img} alt="draper coming soon" />
+              </a>
             </Box>
           </Grid>
         </Grid>
@@ -78,32 +79,32 @@ export const Content = () => {
           </Grid>
           <Grid item xs={5}>
             <Box>
-              <IconButton
+              <a
                 className={classes.iconButton}
                 target="_blank"
                 href="https://www.instagram.com/premiermartialartsriverton/"
               >
                 <img
-                  src={riverton2}
+                  src={riv2}
                   className={classes.img}
                   alt="Riverton Instagram"
                 />
-              </IconButton>
+              </a>
             </Box>
           </Grid>
           <Grid item xs={5}>
             <Box>
-              <IconButton
+              <a
                 className={classes.iconButton}
                 target="_blank"
                 href="#"
               >
                 <img
-                  src={alpine2}
+                  src={drap2}
                   className={classes.img}
-                  alt="Alpine Instagram"
+                  alt="Draper Instagram"
                 />
-              </IconButton>
+              </a>
             </Box>
           </Grid>
         </Grid>

@@ -1,10 +1,16 @@
 import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles( theme => ({
-  colorBar: {
-    zIndex: 0,
-    backgroundColor: theme.palette.colors.maroon,
-    height: 50,
+  bar: {
+    boxSizing: 'border-box',
+    height: 65,
+    padding: '20px 15px',
+    backgroundColor: theme.palette.colors.green,
+    display: 'flex',
+    justifyContent: 'flex-end',
+    '&>*': {
+      margin: '0 15px',
+    }
   },
   logoBox: {
     zIndex: 10,

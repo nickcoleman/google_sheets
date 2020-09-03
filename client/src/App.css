@@ -1,8 +1,11 @@
-.App {
-  text-align: center;
+a{
+  text-decoration: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a:link, a:visited{
+  color: black;
+}
+.links a{
+	font-size: .7em;
+	padding: 5px 12px;
+	color: white;
 }
