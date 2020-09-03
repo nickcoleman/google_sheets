@@ -25,6 +25,6 @@ const style = {
     display: "grid",
     justifyContent: "center",
     gridGap: "3.5rem 2rem",
-    gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))",
   },
 };
