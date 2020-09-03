@@ -3,7 +3,6 @@ import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
 import Facebook from 'mdi-material-ui/Facebook';
 import Instagram from 'mdi-material-ui/Instagram';
 
