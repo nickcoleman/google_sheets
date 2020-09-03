@@ -1,0 +1,38 @@
+[
+	{
+		"name": "Instructor David Kim",
+		"position": "Head Instructor for Premier Martial Arts Utah",
+		"experience": "I have been doing martial arts for over 15 years and have a passion for teaching and developing black belts, both Inside and outside of the gym!",
+		"roles": ["Certified PMA Youth Instructor 2020", "Certified PMA Adult Instructor 2020"],
+		"personal_statement": "I joined the Premier Martial Arts Utah team to teach and develop black belts!  Martial Arts has taught me to be confident in my abilities, be comfortable in my own skin, and has empowered me to accomplish my goals in life. The principles that martial arts teach go beyond punches and kicks.  Martial arts can change your life for the better.  This is why I teach martial arts and would love to make a change in you or your child’s life.",
+		"phone": "(435) 709-6327",
+		"email": "david@pmautah.com"
+	},
+	{
+		"name": "Instructor Rocco Losurdo",
+		"position": "Head Instructor for Premier Martial Arts in Riverton Utah",
+		"experience": "I have been doing martial arts for over 14 years.  Helping others live their best life is my true passion and purpose in life!",
+		"roles": ["Certified PMA Youth Instructor 2020", "Certified PMA Adult Instructor 2020"],
+		"personal_statement": "I owe all of my life achievements from the core values I learned from martial arts.  I’m excited to pay it forward as an instructor at Premier Martial Arts and empower my students to live their best life possible by teaching them the  foundations of: discipline, respect, work ethic, courage, and positivity.",
+		"phone": "(435) 709-6326",
+		"email": "rocco@pmautah.com"
+	},
+	{
+		"name": "Program Director Gabrielle Martin",
+		"position": "Program Director for Premier Martial Arts in Riverton Utah",
+		"experience": "I joined Premier martial Arts to further my ability to help children and adults better their lives through martial arts.  I love seeing others grow in ways they never thought possible as well as seeing their confidence shine.",
+		"roles": ["Certified PMA Director 2020"],
+		"personal_statement": "My background is in early childhood education and personal training.  Working with children and combining that with fitness is the most amazing feeling! I am excited to help you or your family start your journey in martial arts, whether you have done it previously or are a beginner.",
+		"phone": "(435) 709-6325",
+		"email": "gabby@pmautah.com"
+	},
+	{
+		"name": "Regional Manager/ Program Director Liz Fischer",
+		"position": "Regional Manager/ Program Director for Premier Martial Arts Utah",
+		"experience": "I joined Premier Martial Arts Utah to educate people how to defend themselves and to become more connected to their bodies.  I am passionate to help you develop mental and physical confidence through PMA’s black belt program.",
+		"roles": ["Certified PMA Director 2020"],
+		"personal_statement": "My background includes a B.S in Advertising, seven years as a marketing professional and three years in event management.  Physical fitness has always been a priority in my life and I’m so excited to help others improve the way they feel on a daily basis through martial arts.  My goal is to help students be better than they were yesterday and to celebrate each victory along the way!",
+		"phone": "(435) 709-6321",
+		"email": "liz@pmautah.com"
+	}
+]

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Premier Martial Arts</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		html{
+			font-size: 20px;
+		}
+		body{
+			width: 100%;
+			max-width: 100vw;
+		}
+		header{
+			width: 100%;
+		}
+		.bar{
+			height: 4rem;
+			background-color: #23AE4A;
+		}
+		.logo{
+			width: 50vw;
+			height: auto;
+			max-width: 300px;
+			margin: 0 auto;
+			display: flex;
+			padding: .5rem;
+		}
+		.pma{
+			position: relative;
+			top: -2rem;
+			margin: 0 auto;
+		}
+		.content{
+			margin: 1rem;
+		}
+		.content img{
+			width: 100%;
+			transition: all 1s;
+		}
+		.content img:hover{
+			transform: scale(1.1);
+		}
+		.locations{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.location{
+			background-color: #23AE4A;
+			border-radius: 3rem;
+			padding: 1rem 2rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: .5rem 0;
+		}
+		.location:hover{
+			background-color: #31c75b;
+		}
+		.location span{
+			height: min-content;
+		}
+		.social{
+			display: flex;
+		}
+		.social img{
+			width: 30px;
+			margin: 0 2vw;
+		}
+		.gallery{
+			margin: 3rem 0;
+			display: grid;
+			grid-gap: 1rem;
+			grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+		}
+		.gallery img{
+			width: 100%;
+		}
+
+		footer{
+			margin-top: 5rem;
+			width: 100%;
+			padding: 1rem;
+			background-color: rgb(238, 238, 238);
+			font-size: .5rem;
+		}
+		@media (min-width: 400px){
+			html{
+				font-size: 25px;
+			}
+			.location{
+				padding: .6rem 1.2rem;
+			}
+		}
+		@media (min-width: 600px){
+			.content{
+				max-width: 50%;
+				margin: 0 auto;
+			}
+			.social img{
+				margin: 0 3vw;
+			}
+		}
+		@media (min-width: 750px){
+			.content{
+				width: unset;
+				max-width: unset;
+			}
+			.locations{
+				flex-direction: row;
+				justify-content: space-around;
+			}
+			.location{
+				margin: 0 1rem;
+				padding: 0 .6rem;
+			}
+			.social img{
+				margin: 10px;
+			}
+		}
+		@media (min-width: 950px){
+			.location{
+				width: 250px;
+			}
+			.content{
+				max-width: 900px;
+			}
+		}
+		.bar {
+			border-bottom: 5px solid #23AE4A;
+			background: linear-gradient(317deg, #23AE4A, #71bc71);
+			background-size: 400% 400%;
+
+			-webkit-animation: green-flow 12s ease infinite;
+			-moz-animation: green-flow 12s ease infinite;
+			animation: green-flow 12s ease infinite;
+		}
+		@-webkit-keyframes green-flow {
+			0%{background-position:0% 2%}
+			50%{background-position:100% 99%}
+			100%{background-position:0% 2%}
+		}
+		@-moz-keyframes green-flow {
+			0%{background-position:0% 2%}
+			50%{background-position:100% 99%}
+			100%{background-position:0% 2%}
+		}
+		@keyframes green-flow {
+			0%{background-position:0% 2%}
+			50%{background-position:100% 99%}
+			100%{background-position:0% 2%}
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<div class='bar'></div>
+		<img alt='PMA logo' class='logo pma' src='https://premier-martial-arts-285116.wl.r.appspot.com/static/media/logo-pma.5287810b.png'></img>
+	</header>
+	<div class='content'>
+		<div class='locations'>
+			<div class='location'>
+				<span>Riverton</span>
+				<span class='social'>
+					<img class='facebook' src='https://premier-martial-arts-285116.wl.r.appspot.com/static/media/coming-soon.6e184d83.png'/>
+					<img class='instagram' src='https://premier-martial-arts-285116.wl.r.appspot.com/static/media/coming-soon.6e184d83.png'/>
+				</span>
+			</div>
+			<div class='location'>
+				<span>Draper</span>
+				<span class='social'>
+					<img class='facebook' src='https://premier-martial-arts-285116.wl.r.appspot.com/static/media/coming-soon.6e184d83.png'/>
+					<img class='instagram' src='https://premier-martial-arts-285116.wl.r.appspot.com/static/media/coming-soon.6e184d83.png'/>
+				</span>
+			</div>
+			<div class='location'>
+				<span>Alpine</span>
+				<span class='social'>
+					<img class='facebook' src='https://premier-martial-arts-285116.wl.r.appspot.com/static/media/coming-soon.6e184d83.png'/>
+					<img class='instagram' src='https://premier-martial-arts-285116.wl.r.appspot.com/static/media/coming-soon.6e184d83.png'/>
+				</span>
+			</div>
+		</div>
+		<div class='gallery'>
+			<img src='https://premier-martial-arts-285116.wl.r.appspot.com/static/media/coming-soon.6e184d83.png' />
+			<img src='https://premier-martial-arts-285116.wl.r.appspot.com/static/media/coming-soon.6e184d83.png' />
+			<img src='https://premier-martial-arts-285116.wl.r.appspot.com/static/media/coming-soon.6e184d83.png' />
+			<img src='https://premier-martial-arts-285116.wl.r.appspot.com/static/media/coming-soon.6e184d83.png' />
+			<img src='https://premier-martial-arts-285116.wl.r.appspot.com/static/media/coming-soon.6e184d83.png' />
+			<img src='https://premier-martial-arts-285116.wl.r.appspot.com/static/media/coming-soon.6e184d83.png' />
+		</div>	
+	</div>
+	<footer>
+		<img class='logo refinedharmony' src='https://premier-martial-arts-285116.wl.r.appspot.com/static/media/refined-harmony-green.18adb415.png'></img>
+		<p>DOING BUSINESS AS PREMIER MARTIAL ARTS UTAH</p>
+		<p>COPYRIGHT 2020 Refined Harmony Premier LLC.</p>
+	</footer>
+</body>
+</html>

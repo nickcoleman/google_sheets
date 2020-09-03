@@ -1,19 +1,15 @@
 import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    // flexShrink: 0,
-    marginTop: 50,
+  bar: {
+    fontSize: '.8rem',
+    height: 65,
+    padding: '20px 15px',
+    backgroundColor: theme.palette.colors.green,
+  '&>*': {
+    margin: '10px 0'
+  }
   },
-  imageBox: {
-    margin: '20px auto',
-    maxWidth: 350,
-  },
-  media: {
-    width: '90%',
-    height: 'auto',
-  },
-  content: {},
 }));
 
 export default useStyles;

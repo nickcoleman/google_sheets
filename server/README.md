@@ -1,6 +1,6 @@
 # Premier Martial Arts Landing pages
 
-SERVER deployed at: https://ma-server-285520.wl.r.appspot.com
+SERVER deployed at: https://server-287604.wn.r.appspot.com
 
 ## Resources
 

@@ -1,20 +1,22 @@
 import React from 'react';
-
+import Navigation from '../shared/Navigation'
 import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
 import pmaLogo from 'assets/logo-pma.png';
 
 import useStyles from './Header.styles';
 
-const Header = () => {
+const Header = ({logo}) => {
   const classes = useStyles();
   return (
-    <Container>
-      <div className={classes.colorBar} />
+    <>
+      <div className={classes.bar}>
+        <Navigation/>
+      </div>
+      {logo && 
       <Box align='center' className={classes.logoBox}>
-        <img src={pmaLogo} className={classes.logo} />
-      </Box>
-    </Container>
+        <img alt="PMA logo" src={pmaLogo} className={classes.logo} />
+      </Box>}
+    </>
   );
 };
 

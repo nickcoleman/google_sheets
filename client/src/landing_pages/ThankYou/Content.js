@@ -1,26 +1,33 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-
-import Facebook from 'mdi-material-ui/Facebook';
-import Instagram from 'mdi-material-ui/Instagram';
 import useStyles from './Content.styles';
+
+import cnst from '../../helpers/constants';
 
 export const Content = () => {
   const classes = useStyles();
 
   return (
-    <Container maxWidth='md' className={classes.container} align='center'>
+    <Container maxWidth="md" className={classes.container} align="center">
+      <img
+        className={classes.gif}
+        alt="wheel gif"
+        src={cnst.THANKS_WHEEL_GIF}
+      />
       <Typography className={classes.title}>
-        WE WILL BE CONTACTING YOU SOON TO SCHEDULE YOUR <u>FREE</u> APPOINTMENT
+        We will be contacting you soon to schedule or confirm your FREE appointment!
       </Typography>
 
-      <Link href='/learnmore' className={classes.link}>
-        LEARN MORE ABOUT US ON FACEBOOK OR INSTAGRAM
-      </Link>
+      <Button
+        id="cta-thankyou"
+        href="http://pmautah.com"
+        className={classes.cta}
+      >
+        {`- Click here -
+Learn more about Premier Martial Arts Utah`}
+      </Button>
     </Container>
   );
 };
