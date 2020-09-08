@@ -1,16 +1,14 @@
 import React from 'react';
-
 import Container from '@material-ui/core/Container';
-
-import Header from 'shared/Header';
-import Footer from 'shared/Footer';
 import Content from './Content';
+import Header from '../../shared/Header';
+import Footer from '../../shared/Footer';
 
-const ThankYou = () => {
+const LearnMore = () => {
   return (
     <>
-      <Header />
-      <Container maxWidth="md" direction="column">
+      <Header logo />
+      <Container>
         <Content />
       </Container>
       <Footer />
@@ -18,4 +16,4 @@ const ThankYou = () => {
   );
 };
 
-export default ThankYou;
+export default LearnMore;

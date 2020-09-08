@@ -4,9 +4,12 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {ThemeProvider} from '@material-ui/core';
 import theme from './theme';
 
-import Promotion from './landing_pages/Promotion/Promotion';
+import Form from './landing_pages/Form/Promotion';
 import ThankYou from './landing_pages/ThankYou/ThankYou';
-import LearnMore from './landing_pages/LearnMore/LearnMore';
+import Home from './landing_pages/Home/LearnMore';
+import Staff from './landing_pages/Staff/Staff';
+
+import termsPDF from './assets/terms.pdf'
 
 import './App.css';
 
@@ -15,10 +18,14 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <Switch>
-          <Route path='/learnmore' component={LearnMore} />
-          <Route path='/promotion' component={Promotion} />
-          <Route path='/thankyou' component={ThankYou} />
-          <Route path='/' component={Promotion} />
+          <Route
+            path="/terms"
+            render={() => <iframe title="terms and conditions" style={{height: '100vh', width: '100vw'}} src={termsPDF}></iframe>}
+          />
+          <Route path="/staff" component={Staff} />
+          <Route path="/form" component={Form} />
+          <Route path="/thankyou" component={ThankYou} />
+          <Route path="/" component={Home} />
         </Switch>
       </Router>
     </ThemeProvider>

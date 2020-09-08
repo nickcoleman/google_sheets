@@ -2,16 +2,28 @@ import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    flex: '1 0 auto',
+    flex: "1 0 auto",
     padding: theme.spacing(2),
   },
   title: {
-    fontSize: '1.5em',
-    padding: '20px 0px',
+    fontSize: "1.5em",
+    padding: "20px 0px",
   },
-  link: {
-    fontSize: '1.25em',
-    color: 'blue',
+  cta: {
+    fontSize: "1.25em",
+    color: "white",
+    backgroundColor: theme.palette.colors.green,
+    padding: "4px 24px",
+    margin: "13vh 0",
+    whiteSpace: "pre-wrap",
+    "&:hover": {
+      backgroundColor: "#38cc75",
+    },
+  },
+  gif: {
+    width: '100%',
+    maxWidth: 350,
+    margin: "10px 0",
   },
 }));
 

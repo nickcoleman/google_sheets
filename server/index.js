@@ -15,12 +15,12 @@ app.get('/', (req, res) => {
   res
     .status(200)
     .send(
-      'MA Server is running -- navigate to http://https://ma-server-285520.wl.r.appspot.com/landing/contact'
+      "MA Server is running -- send requests to https://server-287604.wn.r.appspot.com/landing/contact"
     );
 });
 
 app.get('/landing', (req, res) => {
-  res.send(200).send('Landing Pages');
+  res.status(200).send('Landing Page');
 });
 
 app.post('/landing/contact', (req, res) => {
