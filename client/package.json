@@ -13,7 +13,7 @@
     "formik": "^2.1.5",
     "google-spreadsheet": "^3.0.11",
     "mdi-material-ui": "^6.17.0",
-    "moment": "^2.29.2",
+    "moment": "^2.29.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router": "^5.2.0",
